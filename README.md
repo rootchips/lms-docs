@@ -97,8 +97,65 @@
  }
  ```
  
+### Create FAQ in Course (Content)
+#### Table - learning_faq_cat
+##### Sample data
+```json
+ {
+  "idCategory": "1",
+  "title": "TestFAQ",
+  "description": "Testing FAQ",
+  "author": "11840",
+  "created_at": "2024-09-30 23:56:59",
+  "updated_at": "2024-09-30 23:56:59"
+ }
+ ```
+ 
+### Create Glossary in Course (Content)
+#### Table - learning_glossary
+##### Sample data
+```json
+ {
+  "idGlossary": "1",
+  "title": "Glossary Test",
+  "description": "Glossary",
+  "author": "11840",
+  "created_at": "2024-09-30 23:59:19",
+  "updated_at": "2024-09-30 23:59:19"
+ }
+ ```
+ 
+### Create HTML Page (with File) in Course
+#### Table - learning_htmlpage
+#### Sample data
+```json
+{
+  "idPage": "1",
+  "title": "HTML Test",
+  "textof": "Test",
+  "author": "11840",
+  "created_at": "2024-10-01 00:02:05",
+  "updated_at": "2024-10-01 00:02:05"
+ }
+ ```
+#### Table - learning_htmlpage_attachment
+#### Location file and sample data
+```sh
+ls -alF root-project/files/appLms/htmlpages/
+```
+```json
+ {
+  "id": "1",
+  "idpage": "1",
+  "file": "2_75_1727712125_N3C System Generated Receipt.pdf",
+  "title": "Generated Receipt.pdf",
+  "created_at": "2024-10-01 00:02:05",
+  "updated_at": "2024-10-01 00:02:05"
+ }
+```
+
 ### Content
-### Summary
+### All content from above will create data in this table too
 #### Table - learning_organization
 ##### Sample data
  ```json
@@ -224,60 +281,3 @@
  }
 ]
  ```
- 
-### Create FAQ in Course (Content)
-#### Table - learning_faq_cat
-##### Sample data
-```json
- {
-  "idCategory": "1",
-  "title": "TestFAQ",
-  "description": "Testing FAQ",
-  "author": "11840",
-  "created_at": "2024-09-30 23:56:59",
-  "updated_at": "2024-09-30 23:56:59"
- }
- ```
- 
-### Create Glossary in Course (Content)
-#### Table - learning_glossary
-##### Sample data
-```json
- {
-  "idGlossary": "1",
-  "title": "Glossary Test",
-  "description": "Glossary",
-  "author": "11840",
-  "created_at": "2024-09-30 23:59:19",
-  "updated_at": "2024-09-30 23:59:19"
- }
- ```
- 
-### Create HTML Page (with File) in Course
-#### Table - learning_htmlpage
-#### Sample data
-```json
-{
-  "idPage": "1",
-  "title": "HTML Test",
-  "textof": "Test",
-  "author": "11840",
-  "created_at": "2024-10-01 00:02:05",
-  "updated_at": "2024-10-01 00:02:05"
- }
- ```
-#### Table - learning_htmlpage_attachment
-#### Location file and sample data
-```sh
-ls -alF root-project/files/appLms/htmlpages/
-```
-```json
- {
-  "id": "1",
-  "idpage": "1",
-  "file": "2_75_1727712125_N3C System Generated Receipt.pdf",
-  "title": "Generated Receipt.pdf",
-  "created_at": "2024-10-01 00:02:05",
-  "updated_at": "2024-10-01 00:02:05"
- }
-```
