@@ -1,7 +1,7 @@
 # LMS
 
 ### Create User
-#### Table - core_user
+#### Table - `core_user`
 ##### Sample data
 ```json
  {
@@ -22,7 +22,7 @@
  ```
 
 ### Create course
-##### Table - learning_course
+##### Table - `learning_course`
 ##### Sample data
 ```json
 {
@@ -75,7 +75,7 @@
  ```
  
 ### User Subscribe to course
-#### Table - learning_courseuser
+#### Table - `learning_courseuser`
 ##### Sample data (level - 3 == student)
 ```json
 {
@@ -112,7 +112,7 @@
  ```
  
 ### Create Glossary in Course (Content)
-#### Table - learning_glossary
+#### Table - `learning_glossary`
 ##### Sample data
 ```json
  {
@@ -126,7 +126,7 @@
  ```
  
 ### Create HTML Page (with File) in Course
-#### Table - learning_htmlpage
+#### Table - `learning_htmlpage`
 #### Sample data
 ```json
 {
@@ -138,7 +138,7 @@
   "updated_at": "2024-10-01 00:02:05"
  }
  ```
-#### Table - learning_htmlpage_attachment
+#### Table - `learning_htmlpage_attachment`
 #### Location file and sample data
 ```sh
 ls -alF root-project/files/appLms/htmlpages/
@@ -156,7 +156,7 @@ ls -alF root-project/files/appLms/htmlpages/
 
 ### Content
 ### All content from above will create data in this table too
-#### Table - learning_organization
+#### Table - `learning_organization`
 ##### Sample data
  ```json
 [
