@@ -281,3 +281,247 @@ ls -alF root-project/files/appLms/htmlpages/
  }
 ]
  ```
+
+### Test
+#### To create a test and put it same as learning_organization
+#### Table - `learning_test`
+##### Sample Data
+```
+  {
+    "idTest": 9,
+    "author": 11840,
+    "title": "TEST",
+    "description": "TEST",
+    "point_type": 0,
+    "point_required": 0,
+    "display_type": 0,
+    "order_type": 0,
+    "shuffle_answer": 0,
+    "question_random_number": 0,
+    "save_keep": 0,
+    "mod_doanswer": 1,
+    "can_travel": 1,
+    "show_only_status": 0,
+    "show_score": 1,
+    "show_score_cat": 0,
+    "show_doanswer": 0,
+    "show_solution": 0,
+    "time_dependent": 0,
+    "time_assigned": 0,
+    "penality_test": 0,
+    "penality_time_test": 0,
+    "penality_quest": 0,
+    "penality_time_quest": 0,
+    "max_attempt": 0,
+    "hide_info": 0,
+    "order_info": "",
+    "cf_info": "",
+    "use_suspension": 0,
+    "suspension_num_attempts": 0,
+    "suspension_num_hours": 0,
+    "suspension_prerequisites": 0,
+    "chart_options": "",
+    "mandatory_answer": 0,
+    "score_max": 0,
+    "obj_type": "test",
+    "retain_answers_history": 0,
+    "gradimento": null,
+    "created_at": "2024-11-10 23:39:50",
+    "updated_at": "2024-11-10 23:39:50"
+  }
+```
+
+### Test
+#### To create a question in a test
+##### Table - `learning_testquest`
+###### Sample Data
+```
+  {
+    "idQuest": 9,
+    "idTest": 9,
+    "idCategory": 0,
+    "type_quest": "choice",
+    "title_quest": "What is 1+1?",
+    "difficult": 3,
+    "time_assigned": 0,
+    "sequence": 1,
+    "page": 1,
+    "shuffle": 0,
+    "created_at": "2024-11-10 23:46:51",
+    "updated_at": "2024-11-10 23:46:51"
+  }
+```
+
+### Test
+#### To create multiple answer in a question
+#### Table - `learning_testquestanswer`
+##### Sample Data
+```
+[
+  {
+    "idAnswer": 17,
+    "idQuest": 9,
+    "sequence": 0,
+    "is_correct": 0,
+    "answer": "1",
+    "comment": "",
+    "score_correct": 100,
+    "score_incorrect": 10,
+    "created_at": "2024-11-10 23:46:51",
+    "updated_at": "2024-11-10 23:46:51"
+  },
+  {
+    "idAnswer": 18,
+    "idQuest": 9,
+    "sequence": 0,
+    "is_correct": 1,
+    "answer": "2",
+    "comment": "",
+    "score_correct": 100,
+    "score_incorrect": 10,
+    "created_at": "2024-11-10 23:46:51",
+    "updated_at": "2024-11-10 23:46:51"
+  },
+  {
+    "idAnswer": 19,
+    "idQuest": 9,
+    "sequence": 0,
+    "is_correct": 0,
+    "answer": "3",
+    "comment": "",
+    "score_correct": 100,
+    "score_incorrect": 10,
+    "created_at": "2024-11-10 23:46:51",
+    "updated_at": "2024-11-10 23:46:51"
+  }
+]
+```
+
+### Test
+#### To attempt answer a question
+#### Table - `learning_testtrack`
+##### Sample Data
+```
+  {
+    "idTrack": 9,
+    "idUser": 11840,
+    "idReference": 25,
+    "idTest": 9,
+    "date_attempt": "2024-11-10 23:49:31",
+    "date_attempt_mod": null,
+    "date_end_attempt": "2024-11-10 23:51:24",
+    "last_page_seen": 1,
+    "last_page_saved": 0,
+    "number_of_save": 1,
+    "number_of_attempt": 1,
+    "score": 100,
+    "bonus_score": 0,
+    "score_status": "valid",
+    "comment": "",
+    "attempts_for_suspension": 0,
+    "suspended_until": null,
+    "created_at": "2024-11-10 23:49:26",
+    "updated_at": "2024-11-10 23:51:24"
+  }
+```
+### Test
+#### To submit answer a question
+#### Table - `learning_testtrack_answer`
+##### Sample Data
+```
+[
+  {
+    "idTrack": 9,
+    "idQuest": 9,
+    "idAnswer": 17,
+    "score_assigned": 100,
+    "more_info": "",
+    "manual_assigned": 0,
+    "user_answer": 0,
+    "number_time": 1,
+    "id": 21,
+    "created_at": "2024-11-10 23:51:24",
+    "updated_at": "2024-11-10 23:51:24"
+  },
+  {
+    "idTrack": 9,
+    "idQuest": 9,
+    "idAnswer": 18,
+    "score_assigned": 100,
+    "more_info": "",
+    "manual_assigned": 0,
+    "user_answer": 1,
+    "number_time": 1,
+    "id": 22,
+    "created_at": "2024-11-10 23:51:24",
+    "updated_at": "2024-11-10 23:51:24"
+  },
+  {
+    "idTrack": 9,
+    "idQuest": 9,
+    "idAnswer": 19,
+    "score_assigned": 100,
+    "more_info": "",
+    "manual_assigned": 0,
+    "user_answer": 0,
+    "number_time": 1,
+    "id": 23,
+    "created_at": "2024-11-10 23:51:24",
+    "updated_at": "2024-11-10 23:51:24"
+  }
+]
+```
+
+### Test
+#### To track test track page
+#### Table - `learning_testtrack_page`
+##### Sample Data
+```
+  {
+    "idTrack": 9,
+    "page": 1,
+    "display_from": "2024-11-10 23:49:31",
+    "display_to": "2024-11-10 23:51:24",
+    "accumulated": 0,
+    "id": 10,
+    "created_at": "2024-11-10 23:49:31",
+    "updated_at": "2024-11-10 23:51:24"
+  }
+```
+
+### Test
+#### To record question track page
+#### Table - `learning_testtrack_quest`
+##### Sample Data
+```
+  {
+    "idTrack": 9,
+    "idQuest": 9,
+    "page": 1,
+    "id": 10,
+    "created_at": "2024-11-10 23:49:31",
+    "updated_at": "2024-11-10 23:49:31"
+  }
+```
+
+### Test
+#### To record how much attempt / timing user answer a question
+#### Table - `learning_testtrack_times`
+##### Sample Data
+```
+  {
+    "idTrack": 9,
+    "idReference": 25,
+    "idTest": 9,
+    "date_attempt": "2024-11-10 23:51:24",
+    "number_time": 1,
+    "score": 100,
+    "score_status": "valid",
+    "date_begin": "2024-11-10 23:49:31",
+    "date_end": "2024-11-10 23:51:24",
+    "time": 113,
+    "id": 10,
+    "created_at": "2024-11-10 23:51:24",
+    "updated_at": "2024-11-10 23:51:24"
+  }
+```
